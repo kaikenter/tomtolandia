@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razones por las que eres un tonoto ❤️</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 style="text-align: center; margin-top: 50px; font-family: 'Dancing Script'; font-size: 3.5rem;">Top razones por
+        las que eres un tonoto que me entiende</h1>
+
+    <div class="bento-grid">
+        <!-- Tarjeta 1 (Tall) -->
+        <div class="card tall"
+            onclick="abrirPanel('Adoro cómo me haces reír incluso en los días difíciles, se que soy mas seca que un limón pero adoro jugar contigo, adoro que te dediques a entenderme en vez de juzgarme por como soy, se que no soy facil de tratar y mucho menos de complacer, veo tantos defectos en mi que siempre me cuestionare porque aún así decides quedarte.')">
+            <img src="imagenes/ia.png" alt="Foto 1">
+            <div class="hover-overlay">Haz clic para leer ❤️</div>
+        </div>
+
+        <!-- Tarjeta 2 (Wide) -->
+        <div class="card wide"
+            onclick="abrirPanel('Eres mi lugar seguro ahora y aunque se que no lo demuestro quiero que sepas que pase lo que pase no me arrepentire de quererte, quizás las cosas no salgan como pensamos pero podre decirte que fuiste mi estándar de hombre, porque eres para mi.')">
+            <img src="imagenes/banner.gif" alt="Foto 2">
+            <div class="hover-overlay">Haz clic para leer ❤️</div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="card"
+            onclick="abrirPanel('Por cómo me cuidas aunque estemos a kilómetros, realmente desearía que estuvieras aquí pienso que todo sería mas fácil pero la vida es cruel decidio separarnos porque sabe que eramos muy poderosos (o porque problablemente ya tuvieramos 40 hijos).')">
+            <img src="imagenes/chiikawa.jpg" alt="Foto 3">
+            <div class="hover-overlay">Haz clic para leer ❤️</div>
+        </div>
+
+
+        <!-- Tarjeta Normal (Gatito con Playlist) -->
+        <div class="card"
+            onclick="abrirPanel('Esta es nuestra playlist especial para cuando extrañes mis tonteras. <br><br> <a href=\'https://open.spotify.com/playlist/1a9kAqiQfkQuuAF4wbRuQS?si=b3bf7577121b4e17&pt=98e35464ffbe864747f33b87eddb700a\' target=\'_blank\' class=\'btn-spotify\'>Escuchar en Spotify 🎵</a>')">
+            <img src="imagenes/gatito.gif" alt="Foto 4">
+            <div class="hover-overlay">Haz clic para la sorpresa ❤️</div>
+        </div>
+
+        <!-- EL PANEL FLOTANTE (Invisible por defecto) -->
+        <div id="miPanel" class="modal" onclick="cerrarPanel()">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="close" onclick="cerrarPanel()">&times;</span>
+                <p id="mensajePanel"></p>
+            </div>
+        </div>
+
+        <div style="text-align: center; padding: 40px;">
+            <a href="index.html" style="color: #d8b4e2; text-decoration: none; font-weight: 300;">← Volver</a>
+        </div>
+
+        <script>
+            function abrirPanel(texto) {               
+                document.getElementById("mensajePanel").innerHTML = texto;
+                document.getElementById("miPanel").style.display = "flex";
+                document.body.style.overflow = "hidden";
+            }
+
+            function cerrarPanel() {
+                document.getElementById("miPanel").style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        </script>
+</body>
+
+</html>
